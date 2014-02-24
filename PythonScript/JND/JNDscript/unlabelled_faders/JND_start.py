@@ -1,0 +1,8 @@
+RPR_ShowConsoleMsg("Welcome to my Just Noticeable Difference (JND) experiments!\n")
+RPR_ShowConsoleMsg("To start JND test for A parameter please press Ctrl+Alt+A \n")
+RPR_ShowConsoleMsg("To start JND test for B parameter please press Ctrl+Alt+B \n")
+RPR_ShowConsoleMsg("To start JND test for C parameter please press Ctrl+Alt+C \n")
+RPR_ShowConsoleMsg("To start JND test for D parameter please press Ctrl+Alt+D \n\n")
+RPR_ShowConsoleMsg("Then please follow the tester's instructions to play the reference audios.\n")
+RPR_ShowConsoleMsg("Alter the relevant bar and play until you can't tell the difference between the sound and the reference audio\n")
+RPR_ShowConsoleMsg("Finally press Ctrl+A/B/C/D to print relevant current value for tester\n\n")

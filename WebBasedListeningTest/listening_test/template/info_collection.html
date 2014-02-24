@@ -1,0 +1,51 @@
+{% extends "background.html" %}
+
+{% block title %}Information collection{% endblock %}
+{% block title1 %}Listening test for heavy metal{% endblock %}
+{% block title2 %}Information collection{% endblock %}
+
+{% block content2 %}
+        <form method="POST" id="questionFrom" name="" action="" target="">
+	<p>
+	Have you listened to any heavy metal music before?
+	</p>
+	<p>
+		<input type="radio" name="familiar" value="Yes"/>Yes
+		<input type="radio" name="familiar" value="No"/>No
+		<input type="hidden" name="questionSelect" id="questionSelect"/>
+	</p>
+
+</form>
+<br>
+    {% endblock %}
+
+{% block title3 %}Example question{% endblock %}
+
+{% block content3 %}
+<link rel="stylesheet" href="/static/css/listeningtest.css" type="text/css">
+
+<label for="riff1">A: </label>
+<object type="application/x-shockwave-flash" data="/static/dewplayer.swf?mp3=/static/example/clean_example.mp3" width="200" height="20" id="dewplayer">
+	<param name="wmode" value="transparent" />
+	<param name="movie" value="/static/dewplayer.swf?mp3=/static/example/clean_example.mp3" />
+</object>
+<br />
+<label for="riff2">B: </label>
+<object type="application/x-shockwave-flash" data="/static/dewplayer.swf?mp3=/static/example/heavy_example.mp3" width="200" height="20" id="dewplayer">
+	<param name="wmode" value="transparent" />
+	<param name="movie" value="/static/dewplayer.swf?mp3=/static/example/heavy_example.mp3" />
+</object>
+<br/>
+<p>
+<br>
+Riff B would be perceived as "heavier" than riff A, so you should choose B.
+</p>
+
+{% endblock %}
+
+{% block hyperlink %}
+    {# hyperlink for final test #}
+    <li class="toctree-l1"><a id="referenceInternal" class="reference internal" href="question/plus/1/">Start the test</a></li>
+    {# hyperlink for homepage #}
+    <li class="toctree-l1"><a class="reference internal" href="/">Home</a></li>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "background.html" %}
+{% block title %}Questions{% endblock %}
+{% block title1 %}Listening test for heavy metal{% endblock %}
+{% block title2 %}{% if question_offset < 21 %}Question {{ question_offset }} out of 20{%endif%}{% endblock %}
+
+{% block content2 %}
+
+<link rel="stylesheet" href="/static/css/listeningtest.css" type="text/css">
+{% if question_offset < 21 %}
+<p> Please choose the perceptual heavier riff:</p>
+<p> You can play several times.</p>
+{%endif%}
+
+{% if question_offset < 21 %}
+<form name="input" action="" method="get">
+<label for="riff1">riff1: </label>
+
+<input type="radio" name="Choose" value="{{songs.0}}" id="riff1">
+<object type="application/x-shockwave-flash" data="/static/dewplayer.swf?mp3=/static/mp3/{{songs.0.source}}/{{songs.0}}" width="200" height="20" id="dewplayer">
+	<param name="wmode" value="transparent" />
+	<param name="movie" value="/static/dewplayer.swf?mp3=/static/mp3/{{songs.0.source}}/{{songs.0}}" />
+</object><div id="star1"></div>
+<br />
+<label for="riff2">riff2: </label>
+<input type="radio" name="Choose" value="{{songs.1}}" id="riff2">
+
+<object type="application/x-shockwave-flash" data="/static/dewplayer.swf?mp3=/static/mp3/{{songs.1.source}}/{{songs.1}}" width="200" height="20" id="dewplayer">
+	<param name="wmode" value="transparent" />
+	<param name="movie" value="/static/dewplayer.swf?mp3=/static/mp3/{{songs.1.source}}/{{songs.1}}" />
+</object><div id="star2"></div>
+<br/>
+<p>
+<!--<input type="submit" value="Submit" />-->
+</p>
+</form> 
+{% else %}
+<p>
+Click the button below to complete the test,Thanks for your test!
+</p>
+<p>
+If you want to do the test again, just use the provided password to login and click "Start the test" in the homepage. 
+</p>
+{%endif%}
+
+{% endblock %}
+
+{% block hyperlink %}
+{% if question_offset == 21 %}
+	<form class="" id="answerform" name="answerform" action="/back/" target="" method="POST">
+		<li class="toctree-l1"><input type="submit" name="answerover"  id="answerover" value="Finish" style="height:35px;width:85px;" /></li>
+	</form>
+{% else %}
+	{# hyperlink for next question #}
+	<form name="input" action="/question/plus/{{ next_question }}/" method="post" id="nextform">
+		<input type="hidden" name="firstsong" value="{{songs.0.weight}}"/>
+		<input type="hidden" name="secondsong" value="{{songs.1.weight}}"/>
+		<input type="hidden" name="songname1" value="{{songs.0}}"/>
+		<input type="hidden" name="songname2" value="{{songs.1}}"/>
+		<input type="hidden" name="songselect" id="songselect" value=""/>
+		<li class="toctree-l1"><!--<a class="reference internal"  href="/question/plus/{{ next_question }}/">Next question</a>--><input type="submit"  id="nextquestion" value="Next question" style="height:35px;width:85px;"/></li>
+	</form>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+If you want to have a rest, please click <a href="/logout/" title="logout" >logout</a>
+<br> Your current work will be saved.
+{% endblock %}
