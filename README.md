@@ -8,3 +8,7 @@ Just Noticeable Difference pre-experiment is carried out using the software Reap
 Web Based Listening experiment is carried out via a website, designed in Django (Django web framework needs Python version under 3.0, e.g. Python2.6 or Python2.7). The website has a register system, requiring user to register and login, so that to randomly provides certain number of audios for comparing. The result is saved in question.db3.
 
 Final data and analysis are in the MatlabScript folder.
+
+<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/JND_4params.jpg" height="300"/>
+<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/heaviness.jpg" height="300"/>
+
