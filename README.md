@@ -9,6 +9,6 @@ Web Based Listening experiment is carried out via a website, designed in Django 
 
 Final data and analysis are in the MatlabScript folder.
 
-<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/JND_4params.jpg" height="300"/>
-<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/heaviness.jpg" height="300"/>
+<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/JND_4params.jpg" width="300"/>
+<img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/heaviness.jpg" width="300"/>
 
