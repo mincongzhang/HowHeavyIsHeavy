@@ -12,3 +12,7 @@ Final data and analysis are in the MatlabScript folder.
 <img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/JND_4params.jpg" width="300"/>
 <img src="https://github.com/mincongzhang/UnderGradFinalProject/raw/master/heaviness.jpg" width="300"/>
 
+
+### new idea
+
+use music scale to detect music genre
