@@ -15,4 +15,4 @@ Final data and analysis are in the MatlabScript folder.
 
 ### new idea
 
-use music scale to detect music genre
+use music scale to (1)detect music genre (2)train and auto generate music
